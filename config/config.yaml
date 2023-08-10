@@ -1,0 +1,47 @@
+defaults:
+  - data: lanczos 
+  - _self_
+
+device: "cuda:0"
+
+arch: "cnnb3bn"
+seed: 666
+margins: null
+
+plot:
+  extension: "png"
+
+table:
+  methods: ["downsampling", "area", "linear", "nearest", "cubic", "lanczos"]
+  archs: ["densenet121", "resnet18", "vgg13bn", "efficientnets", "vggshB3bn"]
+  size: 250
+
+checkpoints:
+    encoder:
+      path_load: saved_models/encoder/model0149.pth.tar
+    model:
+      path_load: /checkpoints/model0149.pth.tar
+      save: True
+
+epoch:
+  start: 0
+  end: 150
+  frequ_to_save: 200
+
+optim:
+  adam:
+    beta1: 0.9
+    beta2: 0.999
+    eps: 1e-8    
+  lr: 4e-4 # note that my init_lr is (lr * batch_size / 256) 
+  weight_decay: 0.0001
+  batch_size: 64
+  n_workers: 8
+  train_all_layer: True
+  pretrain: False
+  pretrain_full: False
+  predict_coeff: False
+
+hydra:
+  job:
+    chdir: False  

@@ -1,0 +1,7 @@
+name: lanczos
+classification: False 
+n_class: 12
+n_pred: 2
+size: [250, 250]
+path_train: TrainSim17_lanczos250_5001000.h5
+path_test: TestSim1_lanczos250_5001000.h5
