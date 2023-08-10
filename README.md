@@ -1,6 +1,6 @@
 # Estimating Contrast-Detail-Curves with neural networks 
 Accompanying code to [About the Generalizability of Deep Learning based Image
-Quality Assessment in Mammography](https://hydra.cc/docs/intro/) to generate Contrast-Detail-Curves (CDCs) to assess the image quality of mammography units.
+Quality Assessment in Mammography]() to generate Contrast-Detail-Curves (CDCs) to assess the image quality of mammography units.
 
 This code contains a toy example only to generate some CDCs.
 
@@ -17,7 +17,7 @@ pip install -r environment/requirement_Mammo.txt
 ```
 
 ## Download the dataset
-A toy dataset with 17 synthetically devices can be downloaded [here](). For each device 50 images have been generated and the images were resized to 250 x 250 pixels using the resize method lanczos.
+A toy training dataset with 17 synthetically devices and a toy test dataset with one device can be downloaded [here](https://box.ptb.de/getlink/fiKj1VjQtN6V2iCZgZ7PK6eB/). For each device 50 images have been generated and the images were resized to 250 x 250 pixels using the resize method lanczos.
 
 Copy the downloaded datasets into the main folder to run the script.
 

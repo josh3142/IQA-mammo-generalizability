@@ -3,8 +3,8 @@
 device="cuda:0"
 data="lanczos"
 lr=0.0004
-epoch_end=10
-load_model="/checkpoints/model0009.pth.tar"
+epoch_end=100
+load_model="/checkpoints/model0099.pth.tar"
 arch="cnnb3bn,efficientnets,resnet18,densenet121,vgg13bn"
 ext="eps"
 seed=1
