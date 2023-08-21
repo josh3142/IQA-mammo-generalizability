@@ -17,13 +17,13 @@ pip install -r environment/requirement_Mammo.txt
 ```
 
 ## Download the dataset
-A toy training dataset with 17 synthetically devices and a toy test dataset with one device can be downloaded [here](https://box.ptb.de/getlink/fiKj1VjQtN6V2iCZgZ7PK6eB/). For each device 50 images have been generated and the images were resized to 250 x 250 pixels using the resize method lanczos.
+A toy training dataset with 17 synthetical devices and a toy test dataset with one device can be downloaded [here](https://box.ptb.de/getlink/fiKj1VjQtN6V2iCZgZ7PK6eB/). For each device 50 images have been generated and the images were resized to 250 x 250 pixels using the resize method lanczos.
 
 Copy the downloaded datasets into the main folder to run the script.
 
 ## Running the script
 To manage different runs the package [hydra](https://hydra.cc/docs/intro/) is used. Default setting generate CDCs for different architectures resizing the images to 250 x 250 pixels using lanczos. 
-The default settings can be overwritten easily. To train a ResNet18 on device cuda:0 with seed 1 can be done by
+The default settings can be overwritten easily. To train a ResNet18 on device `cuda:0` with seed `1` can be done by
 ```
 python run.py device=cuda:0 arch=resnet seed=1
 ```
