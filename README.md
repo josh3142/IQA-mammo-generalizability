@@ -9,7 +9,7 @@ If you need further information please consult one of the authors of the corresp
 ## Requirements
 
 ### Packages
-Create a virtual environment with `python=3.9` and install the all the packages with `pip` from `requirement_Mammo.txt`. The relevant environment is provided:
+Create a virtual environment with `python=3.9` and install all the packages with `pip` from `requirement_Mammo.txt`. The relevant environment is provided:
 ```
 conda env create -f environment/create_env_Mammography.yml
 conda activate Mammo
@@ -23,15 +23,14 @@ Copy the downloaded datasets into the main folder to run the script.
 
 ## Running the script
 To manage different runs the package [hydra](https://hydra.cc/docs/intro/) is used. Default setting generate CDCs for different architectures resizing the images to 250 x 250 pixels using lanczos. 
-```python run.py```
-The default settings can be overwritten easily. To train a model on resizing method with cubic resizing and ResNet18 architecture on device cuda:0 with seed 1 can be done by
+The default settings can be overwritten easily. To train a ResNet18 on device cuda:0 with seed 1 can be done by
 ```
-python run.py device=cuda:0 data=cubic arch=resnet seed=1
+python run.py device=cuda:0 arch=resnet seed=1
 ```
 
-Alternatively training, plotting the loss curves and generating the CDCs can be done by running
+Alternatively training all models, plotting its loss curves and generating its CDCs can be done by running
 ```
-bash running_script/run_toy_example.sh
+bash running_script/run.sh
 ``` 
 
 ## Disclaimer
